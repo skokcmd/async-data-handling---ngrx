@@ -1,0 +1,22 @@
+<div class="border p-3">
+  <div class="input-group my-3">
+    <input type="text" placeholder="Enter a todo.." [(ngModel)]="todo" class="form-control">
+    <button
+      type="button"
+      (click)="addTodo(todo)"
+      class="btn btn-primary"
+      ngbTooltip="This will add a new todo">
+      Add todo
+    </button>
+  </div>
+<ul *ngFor="let todo of allTodos$ | async" class="list-unstyled">
+  <li class="d-flex justify-content-between align-items-center">
+    {{todo.content}}
+    <button
+      type="button"
+      class="btn btn-danger"
+      (click)="removeTodo(todo.id)"
+      ngbTooltip="Removes todo">X</button>
+  </li>
+</ul>
+</div>

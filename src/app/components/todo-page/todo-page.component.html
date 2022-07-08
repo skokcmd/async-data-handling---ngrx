@@ -1,0 +1,7 @@
+<div class="vh-100 d-flex flex-column justify-content-center align-items-center">
+  <h1>Super todo app</h1>
+  <app-todo-list
+    [allTodos$]="allTodos$"
+    (onAddTodo)="addTodo($event)"
+    (onRemoveTodo)="removeTodo($event)"></app-todo-list>
+</div>
