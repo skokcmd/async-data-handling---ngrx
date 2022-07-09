@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { TodoService } from '../../shared/todo.service';
+import { Store } from '@ngrx/store';
+import { AppState } from '../../state/app.state';
+import {
+  createTodo,
+  loadTodos,
+  removeTodo,
+} from '../../state/todos/todo.actions';
+import { selectAllTodos } from '../../state/todos/todo.selector';
 
 @Component({
   selector: 'app-todo-page',
@@ -7,17 +14,20 @@ import { TodoService } from '../../shared/todo.service';
   styleUrls: ['./todo-page.component.css'],
 })
 export class TodoPageComponent implements OnInit {
-  allTodos$ = this.todoService.getTodos();
+  // allTodos$ = this.store.select((state) => state.todos.todos);
+  allTodos$ = this.store.select(selectAllTodos);
 
-  constructor(private todoService: TodoService) {}
+  constructor(private store: Store<AppState>) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.store.dispatch(loadTodos());
+  }
 
   addTodo(content: string) {
-    this.todoService.addTodo(content);
+    this.store.dispatch(createTodo({ content }));
   }
 
   removeTodo(id: number) {
-    this.todoService.removeTodo(id);
+    this.store.dispatch(removeTodo({ id }));
   }
 }

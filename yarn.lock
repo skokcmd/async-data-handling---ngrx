@@ -1352,6 +1352,20 @@
   dependencies:
     tslib "^2.3.0"
 
+"@ngrx/effects@^14.0.1":
+  version "14.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-14.0.1.tgz#3b0d79eb83a0aee30273f27c42c5d703547eaf9e"
+  integrity sha512-haFJ7uB9Gz0O8TJ/3M8HDozx17Meh5gRrF7ANj6gwz3WXEZIsV6/7oxQvT6RNwikwhV7RUWAVHBF+FlNJea2JQ==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/store@^14.0.1":
+  version "14.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-14.0.1.tgz#5a9de1bb0c322f0b4ce953339dc3ca4925c41af5"
+  integrity sha512-DoaH7MwRoE8KW6+c+mKczW7HrG9+Uuw+z8jWxZvL3wTnGyBaEOpu7GlVO/JN0nyz4/FW0MIBMYubCM5AAaaDpw==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngtools/webpack@14.0.5":
   version "14.0.5"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-14.0.5.tgz#f1f516612532660be69c76d1de58c0d4bf8b9a34"
@@ -6134,7 +6148,7 @@ tree-kill@1.2.2:
   resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
   integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
-tslib@2.4.0, tslib@^2.1.0, tslib@^2.3.0:
+tslib@2.4.0, tslib@^2.0.0, tslib@^2.1.0, tslib@^2.3.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
   integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==

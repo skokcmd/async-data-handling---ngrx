@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Todo } from '../../shared/todo.model';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-todo-list',
@@ -9,7 +9,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class TodoListComponent implements OnInit {
   @Input()
-  allTodos$: BehaviorSubject<Todo[]>;
+  allTodos$: BehaviorSubject<Todo[]> | Observable<Todo[]>;
   todo: string;
 
   @Output()
@@ -23,12 +23,11 @@ export class TodoListComponent implements OnInit {
   ngOnInit(): void {}
 
   addTodo(content: string) {
-    // this.todoService.addTodo(content);
     this.onAddTodo.emit(content);
+    this.todo = '';
   }
 
   removeTodo(id: number) {
-    // this.todoService.removeTodo(id);
     this.onRemoveTodo.emit(id);
   }
 }

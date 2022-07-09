@@ -9,14 +9,15 @@
       Add todo
     </button>
   </div>
-<ul *ngFor="let todo of allTodos$ | async" class="list-unstyled">
-  <li class="d-flex justify-content-between align-items-center">
-    {{todo.content}}
-    <button
-      type="button"
-      class="btn btn-danger"
-      (click)="removeTodo(todo.id)"
-      ngbTooltip="Removes todo">X</button>
-  </li>
-</ul>
+  <ul *ngFor="let todo of allTodos$ | async" class="list-unstyled">
+    <li class="d-flex justify-content-between align-items-center">
+      {{todo.content}}
+      <button
+        type="button"
+        class="btn btn-danger"
+        (click)="removeTodo(todo.id)"
+        ngbTooltip="Removes todo">X
+      </button>
+    </li>
+  </ul>
 </div>
